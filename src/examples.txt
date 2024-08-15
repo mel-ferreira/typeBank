@@ -1,0 +1,49 @@
+// Este arquivo não será utilizado !!!!!!!!!!!!
+
+
+//Aqui mostramos como declarar cada váriavel
+
+    let valor: number = 3000;
+    let nome: string = "";
+    let isPago: boolean = false;
+
+//ANY é usado para quando temos uma váriavel que pode receber todos os tipos
+    let qualquer: any = "";
+
+// Quando quisermos ter um array com um tipo específico, devemso fazer o seguinte:
+
+    const lista : number[] = []
+    lista.push(7, 12, 15, 22,28);
+// Aqui estamos colocando informações dentro do array, se colocar um tipo string, boolean ou date, ele não vai funcionar
+// #
+// Para criarmos tipos de objetos especifícos, podemos fazer assim:
+
+type Transacao = {
+    tipoTransacao: TipoTransacao;
+    data: Date;
+    valor: number 
+}
+// Ou seja, uma nova váriavel pode ter o tipo Transacao e terá que seguir a ordem e os tipos do objeto
+// #
+// Para criarmos "chaves" para as transações, ou seja, uma forma única que o navegador enteda e previnir erros de digitação
+// Faremos dessa forma:
+
+enum TipoTransacao {
+    DEPOSITO = "Depósito",
+    TRANFERENCIA = "Transferência",
+    PAGAMENTO_BOLETO =  "Pagamento de boleto"
+}
+
+// Vamos juntar tudo que aprendemos em  em uma váriavel
+// EXEMPLO:
+
+const novaTransacao: Transacao = {
+    tipoTransacao: TipoTransacao.PAGAMENTO_BOLETO,
+    data: new Date(),
+    valor: 0,
+}
+
+console.log(novaTransacao)
+// Utilizamos o type para fazer um objeto padrão
+// Uma enum para determinar o que é cada transação
+// E agora temos uma váriavel que nos possibilita fazer novas transações diferentes

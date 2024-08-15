@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES2023",
+        //Aqui compilamos para a versão mais recente do JS
+        "outDir": "./dist/js/",
+        //Para onde devemos colocar os arquivos que o JS compilar, ou seja, tudo o que for compilado será colcoado nessa pasta
+        "noEmitOnError": true
+        // Toda vez que ele identificar um erro, não gerar outro arquivo JS
+        //Ou seja, só vai compilar para o arquivo JS final se não houver nenhum erro no TS
+    },
+// Passar as pastas onde ele deve procurar e o TypeScript vai incluir todos os arquivos (de qualquer tipo) dentro desse local
+    "include": [
+        "./src/**/*"
+    ]
+}
