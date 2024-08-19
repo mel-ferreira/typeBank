@@ -10,17 +10,19 @@
     color: #fff;
     margin-top: 24px;
 
-    & h2 {
+    &
+    h2 {
         font-size: var(--fonte-t1);
-        padding: 0;
-        margin-block: 0 32px;
+    padding: 0;
+    margin-block: 0 32px;
     }
 
-    & select#tipoTransacao {
-        width: 355px;
+    &
+    select#tipoTransacao {
+        width: 100%;
     }
-
     @media (max-width: 950px) {
         width: 100%;
+        padding: 10px !important;
     }
 }
